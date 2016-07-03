@@ -35,11 +35,6 @@ Django带有一个可选的“flatpages”应用，可以让我们存储简单�
  - ``django.contrib.sites``——“sites”框架，它用于将对象和功能与特定的站点关联。同时，它还是域名和你的Django 站点名称之间的对应关系所保存的位置，即我们需要在这个地方设置我们的网站的域名。
  - ``django.contrib.flatpages``，即上文说到的内容。
 
-在添加``django.contrib.sites``的时候，我们需要创建一个``SITE_ID``。通过这个值等于1，除非我们打算用这个框架去管理多个站点。代码如下所示：
-
-```
-SITE_ID = 1
-
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -185,7 +180,7 @@ url(r'^comments/', include('django_comments.urls')),
 {% render_comment_list for post %}
 ```
 
-用于显示对应博客的评论，最近我们的模板文件如下面的内容所示：
+用于显示对应博客的评论，最后我们的模板文件如下面的内容所示：
 
 ```
 {% extends 'base.html' %}
